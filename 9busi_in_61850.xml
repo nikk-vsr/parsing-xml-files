@@ -1,0 +1,1600 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF xmlns:cim="http://iec.ch/TC57/2008/CIM-schema-cim13#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+
+<cim:PowerTransformer rdf:ID="TF1">
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="S1" />
+<cim:IdentifiedObject.name>TF1</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>1</cim:IdentifiedObject.mRID>
+</cim:PowerTransformer>
+<cim:TransformerWinding rdf:ID="TF11">
+<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#connectionType.Y" />
+<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#windingType.primary" />
+<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#TF1" />
+<cim:TransformerWinding.ratedU>1000</cim:TransformerWinding.ratedU>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T7" />
+</cim:TransformerWinding>
+<cim:TransformerWinding rdf:ID="TF12">
+<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#connectionType.Y" />
+<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#windingType.secondary" />
+<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#TF1" />
+<cim:TransformerWinding.ratedU>13800</cim:TransformerWinding.ratedU>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T1" />
+</cim:TransformerWinding>
+
+<cim:BusbarSection rdf:ID="G1_BB1">
+<cim:IdentifiedObect.name>Busbar Section S1_BB1</cim:IdentifiedObect.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T4" />
+<cim:Equipment.MemberOf_EquipmentContaiber rdf:resource="#S1" />
+</cim:BusbarSection>
+
+<cim:ConnectivityNode rdf:ID="G1_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#G1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="G1_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#G1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="G1_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T7" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#G1" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="G1_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="G1_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 2</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G1_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#VL1" />
+</cim:Breaker>
+
+<cim:Discrete rdf:ID="G1_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#G1_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="G1_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#G1_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="G1_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#G1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G1_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#G1_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G1_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#G1_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G1_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#G1_BB1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G1_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#G1_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G1_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="G1_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G1_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#G1_TF11" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G1_CN3" />
+</cim:Terminal>
+
+
+<cim:Substation rdf:ID="S1">
+<cim:IdentifiedObject.aliasname>Substation S1</cim:IdentifiedObject.aliasname>
+<cim:IdentifiedObject.name>1000kV/13800kV</cim:IdentifiedObject.name>
+</cim:Substation>
+
+<cim:VoltageLevel rdf:ID="S1_VL1">
+<cim:IdentifiedObject.name>Voltage Level</cim:IdentifiedObject.name>
+<cim:VoltageLevel.Value>13800</cim:VoltageLevel.Value>
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1" />
+</cim:VoltageLevel>
+
+<cim:ConnectivityNode rdf:ID="S1_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="S1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S1_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S1_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T8" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S1_CN4">
+<cim:IdentifiedObject.name>Connectivity Node 4</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T9" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S1_CN5">
+<cim:IdentifiedObject.name>Connectivity Node 5</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T12" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T13" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S1_CN6">
+<cim:IdentifiedObject.name>Connectivity Node 6</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T14" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T15" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="S1_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S1_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 2</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S1_BR3">
+<cim:IdentifiedObject.name>Circuit breaker 3</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T8" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T9" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S1_BR4">
+<cim:IdentifiedObject.name>Circuit breaker 4</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S1_BR5">
+<cim:IdentifiedObject.name>Circuit breaker 5</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T12" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S1_BR6">
+<cim:IdentifiedObject.name>Circuit breaker 6</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T14" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S1_VL1" />
+</cim:Breaker>
+
+<cim:Discrete rdf:ID="S1_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S1_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S1_D2">
+<cim:IdentifiedObject.Name>BMeasure2</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S1_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S1_D3">
+<cim:IdentifiedObject.Name>BMeasure3</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S1_BR3" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S1_D4">
+<cim:IdentifiedObject.Name>BMeasure4</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S1_BR4" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S1_D5">
+<cim:IdentifiedObject.Name>BMeasure5</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S1_BR5" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S1_D6">
+<cim:IdentifiedObject.Name>BMeasure6</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S1_BR6" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="S1_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#TF12" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T8">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T9">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T10">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T11">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T12">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T13">
+<cim:Terminal.ConductingEquipment rdf:resource="#L1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T14">
+<cim:Terminal.ConductingEquipment rdf:resource="#S1_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN6" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S1_T15">
+<cim:Terminal.ConductingEquipment rdf:resource="#L6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S1_CN6" />
+</cim:Terminal>
+
+
+<cim:ACLineSegment rdf:ID="L1">
+<cim:Conductor.length>2500</cim:Conductor.length>
+<cim:Conductor.r>0.3125</cim:Conductor.r>
+<cim:Conductor.x>0.28</cim:Conductor.x>
+<cim:Conductor.bch>235.45</cim:Conductor.bch>
+<cim:IdentifiedObject.name>Line L5=5</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>6</cim:IdentifiedObject.mRID>
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T13" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T1" />
+</cim:ACLineSegment>
+
+
+<cim:Substation rdf:ID="S2">
+<cim:IdentifiedObject.aliasname>Substation S2</cim:IdentifiedObject.aliasname>
+<cim:IdentifiedObject.name>1000kV/13800kV</cim:IdentifiedObject.name>
+</cim:Substation>
+
+<cim:VoltageLevel rdf:ID="S2_VL1">
+<cim:IdentifiedObject.name>Voltage Level</cim:IdentifiedObject.name>
+<cim:VoltageLevel.Value>13800</cim:VoltageLevel.Value>
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:VoltageLevel>
+
+<cim:ConnectivityNode rdf:ID="S2_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S2_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S2_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T8" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S2_CN4">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T9" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S2_CN5">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T12" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T13" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S2_CN6">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T14" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T15" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="S2_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S2_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S2_BR3">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T8" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T9" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S2_BR4">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S2_BR5">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T12" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S2_BR6">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T14" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2_VL1" />
+</cim:Breaker>
+
+
+
+<cim:Discrete rdf:ID="S2_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S2_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S2_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S2_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S2_D3">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S2_BR3" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S2_D4">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S2_BR4" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S2_D5">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S2_BR5" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S2_D6">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S2_BR6" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="S2_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#L1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T8">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T9">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T10">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T11">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T12">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T13">
+<cim:Terminal.ConductingEquipment rdf:resource="#L2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T14">
+<cim:Terminal.ConductingEquipment rdf:resource="#S2_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN6" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S2_T15">
+<cim:Terminal.ConductingEquipment rdf:resource="#LD1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S2_CN6" />
+</cim:Terminal>
+
+
+<cim:ACLineSegment rdf:ID="L2">
+<cim:Conductor.length>2500</cim:Conductor.length>
+<cim:Conductor.r>0.3125</cim:Conductor.r>
+<cim:Conductor.x>0.28</cim:Conductor.x>
+<cim:Conductor.bch>235.45</cim:Conductor.bch>
+<cim:IdentifiedObject.name>Line L5=5</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>6</cim:IdentifiedObject.mRID>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T13" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T13" />
+</cim:ACLineSegment>
+
+
+<cim:PowerTransformer rdf:ID="TF2">
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+<cim:IdentifiedObject.name>TF2</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>1</cim:IdentifiedObject.mRID>
+</cim:PowerTransformer>
+<cim:TransformerWinding rdf:ID="TF21">
+<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#connectionType.Y" />
+<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#windingType.primary" />
+<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#TF2" />
+<cim:TransformerWinding.ratedU>1000</cim:TransformerWinding.ratedU>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T7" />
+</cim:TransformerWinding>
+<cim:TransformerWinding rdf:ID="TF22">
+<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#connectionType.Y" />
+<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#windingType.secondary" />
+<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#TF2" />
+<cim:TransformerWinding.ratedU>13800</cim:TransformerWinding.ratedU>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T1" />
+</cim:TransformerWinding>
+
+<cim:BusbarSection rdf:ID="G2_BB1">
+<cim:IdentifiedObect.name>Busbar Section S3_BB1</cim:IdentifiedObect.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T4" />
+<cim:Equipment.MemberOf_EquipmentContaiber rdf:resource="#S3" />
+</cim:BusbarSection>
+
+<cim:ConnectivityNode rdf:ID="G2_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="G2_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="G2_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T7" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="G2_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="G2_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 2</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G2_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#VL1" />
+</cim:Breaker>
+
+
+<cim:Discrete rdf:ID="G2_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#G2_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="G2_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#G2_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="G2_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#G2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G2_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#G2_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G2_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#G2_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G2_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#G2_BB1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G2_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#G2_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G2_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="G2_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G2_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#G2_TF11" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G2_CN3" />
+</cim:Terminal>
+
+
+<cim:Substation rdf:ID="S3">
+<cim:IdentifiedObject.aliasname>Substation C</cim:IdentifiedObject.aliasname>
+<cim:IdentifiedObject.name>1000kV/13800kV</cim:IdentifiedObject.name>
+</cim:Substation>
+
+<cim:VoltageLevel rdf:ID="S3_VL1">
+<cim:IdentifiedObject.name>Voltage Level</cim:IdentifiedObject.name>
+<cim:VoltageLevel.Value>13800</cim:VoltageLevel.Value>
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:VoltageLevel>
+
+<cim:ConnectivityNode rdf:ID="S3_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S3_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S3_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T8" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S3_CN4">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T9" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S3_CN5">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T12" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T13" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S3_CN6">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T14" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T15" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="S3_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S3_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S3_BR3">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="S3_T8" />
+<cim:ConductingEquipment.Terminals rdf:resource="S3_T9" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S3_BR4">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S3_BR5">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T12" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S3_BR6">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T14" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S3_VL1" />
+</cim:Breaker>
+
+<cim:Discrete rdf:ID="S3_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S3_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S3_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S3_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S3_D3">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S3_BR3" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S3_D4">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S3_BR4" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S3_D5">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S3_BR5" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S3_D6">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S3_BR6" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="S3_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#TF12" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T8">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T9">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T10">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T11">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T12">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T13">
+<cim:Terminal.ConductingEquipment rdf:resource="#L2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T14">
+<cim:Terminal.ConductingEquipment rdf:resource="#S3_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN6" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S3_T15">
+<cim:Terminal.ConductingEquipment rdf:resource="#L3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S3_CN6" />
+</cim:Terminal>
+
+
+<cim:ACLineSegment rdf:ID="L3">
+<cim:Conductor.length>2500</cim:Conductor.length>
+<cim:Conductor.r>0.3125</cim:Conductor.r>
+<cim:Conductor.x>0.28</cim:Conductor.x>
+<cim:Conductor.bch>235.45</cim:Conductor.bch>
+<cim:IdentifiedObject.name>Line L5=5</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>6</cim:IdentifiedObject.mRID>
+<cim:ConductingEquipment.Terminals rdf:resource="#S3_T15" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T1" />
+</cim:ACLineSegment>
+
+
+
+<cim:Substation rdf:ID="S4">
+<cim:IdentifiedObject.aliasname>Substation S4</cim:IdentifiedObject.aliasname>
+<cim:IdentifiedObject.name>1000kV/13800kV</cim:IdentifiedObject.name>
+</cim:Substation>
+
+<cim:VoltageLevel rdf:ID="S4_VL1">
+<cim:IdentifiedObject.name>Voltage Level</cim:IdentifiedObject.name>
+<cim:VoltageLevel.Value>13800</cim:VoltageLevel.Value>
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:VoltageLevel>
+
+<cim:ConnectivityNode rdf:ID="S4_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S4_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S4_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T8" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S4_CN4">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T9" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S4_CN5">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T12" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T13" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S4_CN6">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T14" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T15" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="S4_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S4_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S4_BR3">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T8" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T9" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S4_BR4">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S4_BR5">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T12" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S4_BR6">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T14" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S4_VL1" />
+</cim:Breaker>
+
+
+
+<cim:Discrete rdf:ID="S4_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S4_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S4_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S4_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S4_D3">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S4_BR3" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S4_D4">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S4_BR4" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S4_D5">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S4_BR5" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S4_D6">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S4_BR6" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="S4_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#L3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T8">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T9">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T10">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T11">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T12">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T13">
+<cim:Terminal.ConductingEquipment rdf:resource="#L4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T14">
+<cim:Terminal.ConductingEquipment rdf:resource="#S4_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN6" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S4_T15">
+<cim:Terminal.ConductingEquipment rdf:resource="#LD2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S4_CN6" />
+</cim:Terminal>
+
+
+<cim:ACLineSegment rdf:ID="L4">
+<cim:Conductor.length>2500</cim:Conductor.length>
+<cim:Conductor.r>0.3125</cim:Conductor.r>
+<cim:Conductor.x>0.28</cim:Conductor.x>
+<cim:Conductor.bch>235.45</cim:Conductor.bch>
+<cim:IdentifiedObject.name>Line L5=5</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>6</cim:IdentifiedObject.mRID>
+<cim:ConductingEquipment.Terminals rdf:resource="#S4_T13" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T13" />
+</cim:ACLineSegment>
+
+
+<cim:PowerTransformer rdf:ID="TF3">
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5" />
+<cim:IdentifiedObject.name>TF1</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>1</cim:IdentifiedObject.mRID>
+</cim:PowerTransformer>
+<cim:TransformerWinding rdf:ID="TF31">
+<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#connectionType.Y" />
+<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#windingType.primary" />
+<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#TF3" />
+<cim:TransformerWinding.ratedU>1000</cim:TransformerWinding.ratedU>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T7" />
+</cim:TransformerWinding>
+<cim:TransformerWinding rdf:ID="TF32">
+<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#connectionType.Y" />
+<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#windingType.secondary" />
+<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#TF3" />
+<cim:TransformerWinding.ratedU>13800</cim:TransformerWinding.ratedU>
+<cim:ConductingEquipment.Terminals rdf:resource="#S2_T1" />
+</cim:TransformerWinding>
+
+<cim:BusbarSection rdf:ID="G3_BB1">
+<cim:IdentifiedObect.name>Busbar Section S1_BB1</cim:IdentifiedObect.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T4" />
+<cim:Equipment.MemberOf_EquipmentContaiber rdf:resource="#S5" />
+</cim:BusbarSection>
+
+<cim:ConnectivityNode rdf:ID="G3_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="G3_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="G3_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T7" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="G3_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="G3_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 2</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#G3_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#VL1" />
+</cim:Breaker>
+
+<cim:Discrete rdf:ID="G3_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#G3_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="G3_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#G3_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="G3_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#G3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G3_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#G3_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G3_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#G3_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G3_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#G3_BB1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G3_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#G3_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G3_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="G3_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="G3_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#G3_TF31" />
+<cim:Terminal.ConnectivityNode rdf:resource="#G3_CN3" />
+</cim:Terminal>
+
+
+<cim:Substation rdf:ID="S5">
+<cim:IdentifiedObject.aliasname>Substation E</cim:IdentifiedObject.aliasname>
+<cim:IdentifiedObject.name>1000kV/13800kV</cim:IdentifiedObject.name>
+</cim:Substation>
+
+<cim:VoltageLevel rdf:ID="S5_VL1">
+<cim:IdentifiedObject.name>Voltage Level</cim:IdentifiedObject.name>
+<cim:VoltageLevel.Value>13800</cim:VoltageLevel.Value>
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5" />
+</cim:VoltageLevel>
+
+<cim:ConnectivityNode rdf:ID="S5_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S5_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S5_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T8" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S5_CN4">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T9" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S5_CN5">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T12" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T13" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S5_CN6">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T14" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T15" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="S5_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S5_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S5_BR3">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T8" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T9" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S5_BR4">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S5_BR5">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T12" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S5_BR6">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T14" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S5_VL1" />
+</cim:Breaker>
+
+
+
+<cim:Discrete rdf:ID="S5_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S5_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S5_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S5_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S5_D3">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S5_BR3" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S5_D4">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S5_BR4" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S5_D5">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S5_BR5" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S5_D6">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S5_BR6" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="S5_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#TF22" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T8">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T9">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T10">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T11">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T12">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T13">
+<cim:Terminal.ConductingEquipment rdf:resource="#L4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T14">
+<cim:Terminal.ConductingEquipment rdf:resource="#S5_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN6" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S5_T15">
+<cim:Terminal.ConductingEquipment rdf:resource="#L5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S5_CN6" />
+</cim:Terminal>
+
+
+<cim:ACLineSegment rdf:ID="L5">
+<cim:Conductor.length>2500</cim:Conductor.length>
+<cim:Conductor.r>0.3125</cim:Conductor.r>
+<cim:Conductor.x>0.28</cim:Conductor.x>
+<cim:Conductor.bch>235.45</cim:Conductor.bch>
+<cim:IdentifiedObject.name>Line L5=5</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>6</cim:IdentifiedObject.mRID>
+<cim:ConductingEquipment.Terminals rdf:resource="#S5_T15" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T1" />
+</cim:ACLineSegment>
+
+
+
+<cim:Substation rdf:ID="S6">
+<cim:IdentifiedObject.aliasname>Substation S6</cim:IdentifiedObject.aliasname>
+<cim:IdentifiedObject.name>1000kV/13800kV</cim:IdentifiedObject.name>
+</cim:Substation>
+
+<cim:VoltageLevel rdf:ID="S6_VL1">
+<cim:IdentifiedObject.name>Voltage Level</cim:IdentifiedObject.name>
+<cim:VoltageLevel.Value>13800</cim:VoltageLevel.Value>
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6" />
+</cim:VoltageLevel>
+
+
+<cim:ConnectivityNode rdf:ID="S6_CN1">
+<cim:IdentifiedObject.name>Connectivity Node 1</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T1" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T2" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S6_CN2">
+<cim:IdentifiedObject.name>Connectivity Node 2</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T3" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T5" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S6_CN3">
+<cim:IdentifiedObject.name>Connectivity Node 3</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T6" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T8" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S6_CN4">
+<cim:IdentifiedObject.name>Connectivity Node 4</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T9" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S6_CN5">
+<cim:IdentifiedObject.name>Connectivity Node 5</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T12" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T13" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:ID="S6_CN6">
+<cim:IdentifiedObject.name>Connectivity Node 6</cim:IdentifiedObject.name>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T14" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T15" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S2" />
+</cim:ConnectivityNode>
+
+<cim:Breaker rdf:ID="S6_BR1">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T2" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T3" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S6_BR2">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="S6_T4" />
+<cim:ConductingEquipment.Terminals rdf:resource="S6_T6" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S6_BR3">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T8" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T9" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S6_BR4">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T5" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T11" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S6_BR5">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T7" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T12" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6_VL1" />
+</cim:Breaker>
+<cim:Breaker rdf:ID="S6_BR6">
+<cim:IdentifiedObject.name>Circuit breaker 1</cim:IdentifiedObject.name>
+<cim:Breaker.ampRating>100</cim:Breaker.ampRating>
+<cim:Switch.normalyOpen>TRUE</cim:Switch.normalyOpen>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T10" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T14" />
+<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#S6_VL1" />
+</cim:Breaker>
+
+<cim:Discrete rdf:ID="S6_D1">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S6_BR1" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S6_D2">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S6_BR2" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S6_D3">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S6_BR3" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S6_D4">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S6_BR4" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S6_D5">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S6_BR5" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+<cim:Discrete rdf:ID="S6_D6">
+<cim:IdentifiedObject.Name>BMeasure1</cim:IdentifiedObject.Name>
+<cim:Measurement.MeasurementType rdf:resource="#Breakerpos" />
+<cim:Measurement.MemberOf_PSR rdf:resource="#S6_BR6" />
+<cim:Measurement.Unit rdf:resource="#BINARY" />
+</cim:Discrete>
+
+<cim:Terminal rdf:ID="S6_T1">
+<cim:Terminal.ConductingEquipment rdf:resource="#L5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T2">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN1" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T3">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR1" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T4">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T5">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN2" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T6">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR2" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T7">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T8">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN3" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T9">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T10">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T11">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR4" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN4" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T12">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR5" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T13">
+<cim:Terminal.ConductingEquipment rdf:resource="#L6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN5" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T14">
+<cim:Terminal.ConductingEquipment rdf:resource="#S6_BR6" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN6" />
+</cim:Terminal>
+<cim:Terminal rdf:ID="S6_T15">
+<cim:Terminal.ConductingEquipment rdf:resource="#LD3" />
+<cim:Terminal.ConnectivityNode rdf:resource="#S6_CN6" />
+</cim:Terminal>
+
+
+<cim:ACLineSegment rdf:ID="L6">
+<cim:Conductor.length>2500</cim:Conductor.length>
+<cim:Conductor.r>0.3125</cim:Conductor.r>
+<cim:Conductor.x>0.28</cim:Conductor.x>
+<cim:Conductor.bch>235.45</cim:Conductor.bch>
+<cim:IdentifiedObject.name>Line L5=5</cim:IdentifiedObject.name>
+<cim:IdentifiedObject.mRID>6</cim:IdentifiedObject.mRID>
+<cim:ConductingEquipment.Terminals rdf:resource="#S6_T13" />
+<cim:ConductingEquipment.Terminals rdf:resource="#S1_T15" />
+</cim:ACLineSegment>
+
+
+</rdf:RDF>
